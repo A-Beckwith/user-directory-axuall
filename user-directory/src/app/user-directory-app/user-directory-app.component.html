@@ -1,0 +1,14 @@
+<div class="directory-container">
+    <h2>User Directory</h2>
+    <div *ngIf="users">
+        <app-user-card *ngFor="let user of users" [user]="user"></app-user-card>
+    </div>
+    <div class="page-nav">
+        <button (click)="decrementUserPage()" [disabled]="page === 1"><<</button>
+        <p>{{page}}</p>
+        <button (click)="incrementUserPage()">>></button>
+    </div>
+    <div *ngIf="showDownloadButton">
+        <button class="download-btn" (click)="downloadUsersOnPage()">Download Users</button>
+    <div>
+</div>

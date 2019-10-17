@@ -1,0 +1,38 @@
+<div class="user-container" [style.height]="pictureSize">
+    <img src={{picture}}>
+    <div *ngIf="picture === user.picture.large">
+        <div class="user-details-large">
+            <div class="user-detail-group">
+                <h4>First Name</h4>
+                <p>{{user.name.first}}</p>
+                <h4>Last Name</h4>
+                <p>{{user.name.last}}</p>
+            </div>
+            <div class="user-detail-group">
+                <h4>Email</h4>
+                <p>{{user.email}}</p>
+                <h4>Phone Number</h4>
+                <p>{{user.phone}}</p>
+            </div>
+            <div class="user-detail-group">
+                <h4>Age</h4>
+                <p>{{user.dob.age}}</p>
+                <h4>Gender</h4>
+                <p>{{user.gender}}</p>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="picture !== user.picture.large" (click)="showMobileDetails = !showMobileDetails">
+        <span [style.height]="pictureSize">{{user.name.first + " " + user.name.last}}</span>
+    </div>
+</div>
+<div *ngIf="showMobileDetails" class="user-details-mobile">
+    <h4>Email</h4>
+    <p>{{user.email}}</p>
+    <h4>Phone Number</h4>
+    <p>{{user.phone}}</p>
+    <h4>Age</h4>
+    <p>{{user.dob.age}}</p>
+    <h4>Gender</h4>
+    <p>{{user.gender}}</p>
+</div>
