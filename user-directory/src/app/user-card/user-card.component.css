@@ -1,0 +1,58 @@
+img {
+    float: left;
+    border-radius: 5px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+span {
+    vertical-align: center;
+    display: inline-flex;
+    align-items: center;
+}
+
+h4 {
+    margin-bottom: 0px;
+}
+
+p {
+    margin-top: 0px;
+}
+
+.user-container {
+    border-style: solid;
+    border-color: black;
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    min-height: 48px;
+    max-height: 128px;
+}
+
+.user-details-large {
+    column-count: 3;
+}
+
+.user-detail-group p {
+    margin-bottom: 0px;
+}
+
+.user-detail-group h4 {
+    margin-top: 0px;
+}
+
+.user-detail-group h4:first-of-type {
+    padding-top: 15px;
+}
+
+.user-detail-group p:first-of-type {
+    padding-bottom: 15px;
+}
+
+.user-details-mobile {
+    margin: 0 auto;
+    margin-bottom: 15px;
+    width: 80%;
+}
+
+
